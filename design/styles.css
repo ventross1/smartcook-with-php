@@ -1,0 +1,91 @@
+@import url('https://fonts.cdnfonts.com/css/chalkboard');
+
+body{
+    padding: 0;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    color: #000;
+    background: linear-gradient(0, rgb(32, 129, 64), rgb(142, 204, 220)) fixed;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100svh;
+    width: 100vw;
+}
+.title{
+    font-size: 3vw;
+    font-family: 'chalkboard', sans-serif;
+    text-align: center;
+}
+
+.top{
+    margin: 1em;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    grid-area: 1 / 1 / 2 / 4;
+}
+.login{
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background: linear-gradient(#00ff4c,#f2e35a);
+    background-size: cover;
+    border: 1px, solid;
+    height: auto;
+    width: auto;
+    justify-self: end;
+}
+.grid{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    z-index: -1;
+    margin-top: 4vh;
+
+}
+.grid > div{
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0.25em;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px){
+    .title{
+        font-size: 15px;
+        text-align: start;
+    }
+    .top{
+        grid-template-columns: 250px auto;
+    }
+    /*body{
+        margin: 0;
+    }*/
+}
+
+@media screen and (max-width: 700px){
+    body{
+        margin: 0;
+    }
+    .nav > div{
+        gap: 0;
+        border-radius: 0;
+    }
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    font-size: 15px;
+}
